@@ -10,10 +10,14 @@ import UIKit
 
 class AccountController: UIViewController {
 
+    @IBOutlet weak var email: OraFormField!
+    @IBOutlet weak var password: OraFormField!
+    @IBOutlet weak var save: OraButton!
+    @IBOutlet weak var loaderView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
     

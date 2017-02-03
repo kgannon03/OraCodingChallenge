@@ -18,7 +18,7 @@ enum LoadingState {
 }
 
 class ChatViewModel {
-    
+
     let service: ChatService
     let pageSize: Int = 30
     let disposeBag = DisposeBag()

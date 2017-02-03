@@ -43,6 +43,8 @@
 		CAEF49D71E44E35500FFE3BF /* LoginPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF49D61E44E35500FFE3BF /* LoginPost.swift */; };
 		CAEF49D91E45103200FFE3BF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF49D81E45103200FFE3BF /* Constants.swift */; };
 		CAEF49DB1E4514AA00FFE3BF /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF49DA1E4514AA00FFE3BF /* AccountController.swift */; };
+		CAEF49DD1E45150300FFE3BF /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF49DC1E45150300FFE3BF /* AccountViewModel.swift */; };
+		CAEF49DF1E4515C400FFE3BF /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF49DE1E4515C400FFE3BF /* AccountService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +86,8 @@
 		CAEF49D61E44E35500FFE3BF /* LoginPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPost.swift; sourceTree = "<group>"; };
 		CAEF49D81E45103200FFE3BF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CAEF49DA1E4514AA00FFE3BF /* AccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
+		CAEF49DC1E45150300FFE3BF /* AccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		CAEF49DE1E4515C400FFE3BF /* AccountService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +221,8 @@
 			children = (
 				CAEF49C41E441C2D00FFE3BF /* Account.storyboard */,
 				CAEF49DA1E4514AA00FFE3BF /* AccountController.swift */,
+				CAEF49DC1E45150300FFE3BF /* AccountViewModel.swift */,
+				CAEF49DE1E4515C400FFE3BF /* AccountService.swift */,
 			);
 			name = Account;
 			sourceTree = "<group>";
@@ -344,6 +350,7 @@
 				CAEF49BC1E43E45400FFE3BF /* APIBaseResponse.swift in Sources */,
 				CAEF49B31E43CB1900FFE3BF /* RegisterViewModel.swift in Sources */,
 				CAEF49D51E44E25500FFE3BF /* LoginViewModel.swift in Sources */,
+				CAEF49DD1E45150300FFE3BF /* AccountViewModel.swift in Sources */,
 				CAEF49A51E43BB7500FFE3BF /* RegisterController.swift in Sources */,
 				CAEF49DB1E4514AA00FFE3BF /* AccountController.swift in Sources */,
 				CAEF49A11E43B1C800FFE3BF /* LandingController.swift in Sources */,
@@ -356,6 +363,7 @@
 				CAEF49CD1E44286100FFE3BF /* ChatService.swift in Sources */,
 				CAEF49CB1E44284800FFE3BF /* ChatViewModel.swift in Sources */,
 				CAEF49B91E43E00000FFE3BF /* User.swift in Sources */,
+				CAEF49DF1E4515C400FFE3BF /* AccountService.swift in Sources */,
 				CAEF49CF1E44374300FFE3BF /* ChatList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

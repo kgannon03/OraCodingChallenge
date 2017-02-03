@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -55,9 +56,34 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h8u-o1-IZ2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rfI-dX-KD6" customClass="LoaderView" customModule="OraCodeChallenge" customModuleProvider="target">
+                                        <rect key="frame" x="172.5" y="318.5" width="30" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="qLL-OL-EXZ"/>
+                                            <constraint firstAttribute="width" constant="30" id="wPf-56-S2d"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="animating" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                                <color key="value" red="0.98431372549999996" green="0.68627450980000004" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="rfI-dX-KD6" firstAttribute="centerY" secondItem="h8u-o1-IZ2" secondAttribute="centerY" id="AOw-Id-6XE"/>
+                                    <constraint firstItem="rfI-dX-KD6" firstAttribute="centerX" secondItem="h8u-o1-IZ2" secondAttribute="centerX" id="sHR-OP-c0b"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="h8u-o1-IZ2" secondAttribute="trailing" id="3Xe-Ru-3Ph"/>
                             <constraint firstAttribute="trailing" secondItem="rGR-hU-sTN" secondAttribute="trailing" id="L8s-F9-dit"/>
                             <constraint firstItem="okf-Uv-WWY" firstAttribute="top" secondItem="ju1-9U-4xs" secondAttribute="bottom" constant="20" id="Ogw-4T-26K"/>
                             <constraint firstItem="rGR-hU-sTN" firstAttribute="top" secondItem="uy7-2j-5Vj" secondAttribute="bottom" id="PvK-XF-9aL"/>
@@ -67,10 +93,19 @@
                             <constraint firstItem="ju1-9U-4xs" firstAttribute="leading" secondItem="4sR-LU-sWL" secondAttribute="leading" id="ZbW-MN-74E"/>
                             <constraint firstItem="okf-Uv-WWY" firstAttribute="leading" secondItem="4sR-LU-sWL" secondAttribute="leading" constant="8" id="eAm-lv-S5j"/>
                             <constraint firstAttribute="trailing" secondItem="okf-Uv-WWY" secondAttribute="trailing" constant="8" id="kK4-ox-5rt"/>
+                            <constraint firstItem="h8u-o1-IZ2" firstAttribute="leading" secondItem="4sR-LU-sWL" secondAttribute="leading" id="lgO-TQ-hgV"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="h8u-o1-IZ2" secondAttribute="bottom" id="tYE-h3-kGQ"/>
+                            <constraint firstAttribute="topMargin" secondItem="h8u-o1-IZ2" secondAttribute="top" id="vS0-6N-CQf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="OraChat" id="sgU-G1-JcT"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="email" destination="rGR-hU-sTN" id="3ua-bW-yRO"/>
+                        <outlet property="loaderView" destination="h8u-o1-IZ2" id="5Sk-Bw-nQq"/>
+                        <outlet property="password" destination="ju1-9U-4xs" id="7Zd-pd-xgh"/>
+                        <outlet property="save" destination="okf-Uv-WWY" id="uKx-Pp-kcm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QsG-Ag-azF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
