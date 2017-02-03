@@ -22,7 +22,7 @@ class ChatController: UIViewController {
         super.viewDidLoad()
 
         tableView.tableFooterView = UIView(frame: CGRect.zero)
-        tableView.rowHeight = 110.0
+        tableView.rowHeight = 90.0
         
         addBindings()
     }
@@ -33,7 +33,8 @@ class ChatController: UIViewController {
             .bindTo(tableView.rx.items(
                 cellIdentifier: "ChatCell",
                 cellType: ChatCell.self)) { index, chat, cell in
-                    cell.setChat(chat: chat)
+                    let viewmodel = ChatCellViewModel(chat: chat)
+                    cell.setChat(viewModel: viewmodel)
             }
             .addDisposableTo(disposeBag)
         
