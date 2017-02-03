@@ -26,6 +26,8 @@ class ChatController: UIViewController {
         tableView.estimatedRowHeight = 80.0
         
         addBindings()
+        
+        // TODO: Hook up the add button to the Create Endpoint
     }
     
     func addBindings() {

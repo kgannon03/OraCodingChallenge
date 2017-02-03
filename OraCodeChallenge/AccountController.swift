@@ -22,6 +22,8 @@ class AccountController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.addGestureRecognizer(UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:))))
 
         addBindings()
     }
@@ -42,5 +44,7 @@ class AccountController: UIViewController {
             .asObservable()
             .bindTo(name.rx.text)
             .addDisposableTo(disposeBag)
+        
+        // TODO: Hook up the save button to the Update Endpoint
     }
 }
