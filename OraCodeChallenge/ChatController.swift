@@ -44,6 +44,18 @@ class ChatController: UIViewController {
             .map{ $0 == .Loading ? false : true }
             .bindTo(loadingCover.rx.isHidden)
             .addDisposableTo(disposeBag)
+        
+        tableView.rx.contentOffset
+            .asObservable()
+            .subscribe{[weak self] next in
+                guard let ss = self, let e = next.element else { return }
+                let marker = ss.tableView.contentSize.height / 2.0
+                if e.y + ss.tableView.bounds.size.height > marker {
+                    let pageNum = ss.tableView.numberOfRows(inSection: 0) / ss.viewModel.pageSize
+                    ss.viewModel.page.value = pageNum + 1
+                }
+            }
+            .addDisposableTo(disposeBag)
     }
 }
 

@@ -32,8 +32,26 @@ struct ChatCellViewModel {
         return "\(days) days ago"
     }
     
-    func lastMessageText() -> String {
-        return chat.lastMessage.message
+    func lastMessageText() -> NSAttributedString {
+        let message = NSMutableAttributedString(string: chat.lastMessage.message)
+        message.addAttribute(
+            NSForegroundColorAttributeName,
+            value: UIColor.lightGray,
+            range: NSMakeRange(0, message.length))
+        
+        guard let name = chat.lastMessage.user.name else {
+            return message
+        }
+        
+        let author = NSMutableAttributedString(string: "\(name): ")
+        author.addAttribute(
+            NSForegroundColorAttributeName,
+            value: UIColor(red: 251/155, green: 175/255, blue: 63/255, alpha: 1.0),
+            range: NSMakeRange(0, author.length))
+        
+        author.append(message)
+        
+        return author
     }
     
     func chatTitle() -> String {
@@ -50,7 +68,7 @@ class ChatCell: UITableViewCell {
     func setChat(viewModel: ChatCellViewModel) {
         chatTitle.text = viewModel.chatTitle()
         lastUser.text = viewModel.lastMessageUserAndDate()
-        lastMessage.text = viewModel.lastMessageText()
+        lastMessage.attributedText = viewModel.lastMessageText()
         
         lastMessage.sizeToFit()
     }

@@ -132,7 +132,11 @@
                             <constraint firstAttribute="trailing" secondItem="CbS-Pr-JuB" secondAttribute="trailing" id="nhV-3U-ho1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="OraChat" id="yM7-pW-fW3"/>
+                    <navigationItem key="navigationItem" title="OraChat" id="yM7-pW-fW3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="rkV-OA-ASu">
+                            <color key="tintColor" red="0.98431372549999996" green="0.68627450980000004" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="loadingCover" destination="CbS-Pr-JuB" id="za7-E7-N0b"/>
@@ -163,4 +167,5 @@
             <point key="canvasLocation" x="-580" y="25.637181409295355"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.98431372549999996" green="0.68627450980000004" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
 </document>
