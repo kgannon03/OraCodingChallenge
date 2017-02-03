@@ -22,7 +22,8 @@ class ChatController: UIViewController {
         super.viewDidLoad()
 
         tableView.tableFooterView = UIView(frame: CGRect.zero)
-        tableView.rowHeight = 90.0
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 80.0
         
         addBindings()
     }

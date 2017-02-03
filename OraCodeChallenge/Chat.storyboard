@@ -7,13 +7,14 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--OraChat-->
         <scene sceneID="wMd-U3-9er">
             <objects>
-                <viewController id="UD5-mi-Kan" customClass="ChatController" customModule="OraCodeChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="UD5-mi-Kan" customClass="ChatController" customModule="OraCodeChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hWz-mf-zSw"/>
                         <viewControllerLayoutGuide type="bottom" id="pJp-ma-gaj"/>
@@ -47,45 +48,64 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xsI-LT-puh">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" rowHeight="110" id="KHj-hz-WSU" customClass="ChatCell" customModule="OraCodeChallenge" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="110"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" rowHeight="80" id="KHj-hz-WSU" customClass="ChatCell" customModule="OraCodeChallenge" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KHj-hz-WSU" id="tIa-KT-pfi">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="109"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WMm-1q-f8L">
-                                                    <rect key="frame" x="16" y="8" width="343" height="93.5"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="5mr-dA-F58">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="71.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Chat by Andre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMx-NM-z1Z">
-                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="31"/>
-                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dan - 23 mins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODB-n5-IXh">
-                                                            <rect key="frame" x="0.0" y="31" width="343" height="31.5"/>
-                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
-                                                            <color key="textColor" red="0.98431372549999996" green="0.68627450980000004" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oh hey!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prR-ol-Saz">
-                                                            <rect key="frame" x="0.0" y="62.5" width="343" height="31"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="dLR-TJ-Zgc">
+                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="40"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMx-NM-z1Z">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="258" height="40"/>
+                                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:52 AM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODB-n5-IXh">
+                                                                    <rect key="frame" x="258" y="0.0" width="85" height="40"/>
+                                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="Vh2-33-J50"/>
+                                                                <constraint firstItem="hMx-NM-z1Z" firstAttribute="width" secondItem="dLR-TJ-Zgc" secondAttribute="width" multiplier="0.75" id="j7f-EC-tul"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oh hey!" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prR-ol-Saz">
+                                                            <rect key="frame" x="0.0" y="40" width="343" height="31.5"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q0m-3Q-fkI">
+                                                    <rect key="frame" x="0.0" y="71.5" width="375" height="8"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="8" id="AQJ-B6-9nw"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="WMm-1q-f8L" secondAttribute="trailing" constant="16" id="RQN-u8-cZp"/>
-                                                <constraint firstItem="WMm-1q-f8L" firstAttribute="leading" secondItem="tIa-KT-pfi" secondAttribute="leading" constant="16" id="VLz-E7-sEi"/>
-                                                <constraint firstItem="WMm-1q-f8L" firstAttribute="top" secondItem="tIa-KT-pfi" secondAttribute="top" constant="8" id="jX5-vm-uJI"/>
-                                                <constraint firstAttribute="bottom" secondItem="WMm-1q-f8L" secondAttribute="bottom" constant="8" id="yzs-Ky-e2k"/>
+                                                <constraint firstAttribute="bottom" secondItem="Q0m-3Q-fkI" secondAttribute="bottom" id="1kn-1o-WmE"/>
+                                                <constraint firstItem="Q0m-3Q-fkI" firstAttribute="leading" secondItem="tIa-KT-pfi" secondAttribute="leading" id="P8A-hZ-eZv"/>
+                                                <constraint firstItem="Q0m-3Q-fkI" firstAttribute="top" secondItem="5mr-dA-F58" secondAttribute="bottom" id="Qo5-XI-b5k"/>
+                                                <constraint firstItem="5mr-dA-F58" firstAttribute="top" secondItem="tIa-KT-pfi" secondAttribute="top" id="UfX-F5-vrv"/>
+                                                <constraint firstAttribute="trailing" secondItem="5mr-dA-F58" secondAttribute="trailing" constant="16" id="Voc-jb-qFj"/>
+                                                <constraint firstAttribute="trailing" secondItem="Q0m-3Q-fkI" secondAttribute="trailing" id="ZLT-nL-GIi"/>
+                                                <constraint firstItem="5mr-dA-F58" firstAttribute="leading" secondItem="tIa-KT-pfi" secondAttribute="leading" constant="16" id="kwz-ae-Ah5"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -102,12 +122,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottomMargin" secondItem="xsI-LT-puh" secondAttribute="bottom" id="2TJ-Bf-hjA"/>
                             <constraint firstItem="CbS-Pr-JuB" firstAttribute="leading" secondItem="Oym-fp-sqd" secondAttribute="leading" id="2uT-Mu-bMN"/>
                             <constraint firstAttribute="bottomMargin" secondItem="CbS-Pr-JuB" secondAttribute="bottom" id="5Sv-Kj-fav"/>
                             <constraint firstItem="xsI-LT-puh" firstAttribute="leading" secondItem="Oym-fp-sqd" secondAttribute="leading" id="EyT-Uo-DJf"/>
-                            <constraint firstAttribute="topMargin" secondItem="xsI-LT-puh" secondAttribute="top" id="Qds-9w-vWZ"/>
+                            <constraint firstItem="xsI-LT-puh" firstAttribute="top" secondItem="hWz-mf-zSw" secondAttribute="bottom" id="NZa-ha-kP8"/>
                             <constraint firstItem="CbS-Pr-JuB" firstAttribute="top" secondItem="Oym-fp-sqd" secondAttribute="topMargin" id="WM1-fH-N6Z"/>
+                            <constraint firstItem="pJp-ma-gaj" firstAttribute="top" secondItem="xsI-LT-puh" secondAttribute="bottom" id="Xvz-gM-m1k"/>
                             <constraint firstAttribute="trailing" secondItem="xsI-LT-puh" secondAttribute="trailing" id="dtN-Na-EIr"/>
                             <constraint firstAttribute="trailing" secondItem="CbS-Pr-JuB" secondAttribute="trailing" id="nhV-3U-ho1"/>
                         </constraints>

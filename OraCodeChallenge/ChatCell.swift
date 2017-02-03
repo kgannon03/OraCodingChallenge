@@ -19,18 +19,17 @@ struct ChatCellViewModel {
     
     func lastMessageUserAndDate() -> String {
         guard
-            let name = chat.lastMessage.user.name,
             let date = dateFormatter.date(from: chat.lastMessage.createdDate) else {
             return ""
         }
         
         if Calendar.current.isDateInToday(date) {
             let minutes = Calendar.current.dateComponents([.minute], from: date, to: Date()).minute!
-            return "\(name) - \(minutes) minutes ago"
+            return "\(minutes) mins ago"
         }
         
         let days = Calendar.current.dateComponents([.day], from: date, to: Date()).day!
-        return "\(name) - \(days) days ago"
+        return "\(days) days ago"
     }
     
     func lastMessageText() -> String {
@@ -38,7 +37,8 @@ struct ChatCellViewModel {
     }
     
     func chatTitle() -> String {
-        return chat.name ?? ""
+        guard let name = chat.name else { return "" }
+        return "\(name)"
     }
 }
 
@@ -51,5 +51,7 @@ class ChatCell: UITableViewCell {
         chatTitle.text = viewModel.chatTitle()
         lastUser.text = viewModel.lastMessageUserAndDate()
         lastMessage.text = viewModel.lastMessageText()
+        
+        lastMessage.sizeToFit()
     }
 }

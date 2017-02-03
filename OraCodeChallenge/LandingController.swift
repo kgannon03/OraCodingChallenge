@@ -74,6 +74,6 @@ class LandingController: UIViewController {
             }
             .addDisposableTo(disposeBag)
         
-        present(login, animated: true, completion: nil)
+        present(loginNav, animated: true, completion: nil)
     }
 }
