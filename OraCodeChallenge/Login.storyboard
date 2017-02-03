@@ -9,32 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Log In-->
-        <scene sceneID="i1T-lg-j56">
-            <objects>
-                <viewController id="3Yc-XA-Lw1" customClass="LoginController" customModule="OraCodeChallenge" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2pE-60-HrN"/>
-                        <viewControllerLayoutGuide type="bottom" id="5w8-Jw-ZdL"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="7vN-Nw-lyi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Log In" id="FX1-e1-EQc">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="uTr-HW-na3">
-                            <color key="tintColor" red="0.98431372549999996" green="0.68627450980000004" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="Cancel:" destination="3Yc-XA-Lw1" id="5pP-Pw-moh"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6fj-iW-CEW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-536.79999999999995" y="-694.00299850074964"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="x7h-1f-Vhe">
             <objects>
@@ -46,12 +20,93 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="3Yc-XA-Lw1" kind="relationship" relationship="rootViewController" id="DwW-NC-vaw"/>
+                        <segue destination="T7r-hE-APW" kind="relationship" relationship="rootViewController" id="3Lg-wc-ILK"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Qg-Xy-0ev" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1476" y="-694.00299850074964"/>
         </scene>
+        <!--Sign In-->
+        <scene sceneID="70Y-a8-6S3">
+            <objects>
+                <viewController id="T7r-hE-APW" customClass="LoginController" customModule="OraCodeChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kRS-ZC-j9h"/>
+                        <viewControllerLayoutGuide type="bottom" id="NhP-g1-8Mw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fgn-dE-EUo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kVA-Hq-H7M" customClass="OraFormField" customModule="OraCodeChallenge" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1la-Nj-5fb"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zNI-gp-aQk" customClass="OraFormField" customModule="OraCodeChallenge" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="114" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="G8U-7A-5WT"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jky-XW-yWf" customClass="OraButton" customModule="OraCodeChallenge" customModuleProvider="target">
+                                <rect key="frame" x="8" y="184" width="359" height="36"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.68627450980000004" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="smZ-uG-YiP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="12"/>
+                                <state key="normal" title="SIGN IN">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="login:" destination="T7r-hE-APW" eventType="touchUpInside" id="xa5-Cg-IdS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="kVA-Hq-H7M" secondAttribute="trailing" id="6LB-8h-ssQ"/>
+                            <constraint firstItem="zNI-gp-aQk" firstAttribute="leading" secondItem="fgn-dE-EUo" secondAttribute="leading" id="HPX-OA-AQG"/>
+                            <constraint firstItem="zNI-gp-aQk" firstAttribute="top" secondItem="kVA-Hq-H7M" secondAttribute="bottom" id="Lsg-0e-6Vb"/>
+                            <constraint firstAttribute="trailing" secondItem="zNI-gp-aQk" secondAttribute="trailing" id="Tn8-wZ-aRa"/>
+                            <constraint firstItem="Jky-XW-yWf" firstAttribute="leading" secondItem="fgn-dE-EUo" secondAttribute="leading" constant="8" id="cHf-kP-ECN"/>
+                            <constraint firstItem="kVA-Hq-H7M" firstAttribute="top" secondItem="kRS-ZC-j9h" secondAttribute="bottom" id="ddi-EJ-uB6"/>
+                            <constraint firstItem="kVA-Hq-H7M" firstAttribute="leading" secondItem="fgn-dE-EUo" secondAttribute="leading" id="g1d-bb-K8r"/>
+                            <constraint firstItem="Jky-XW-yWf" firstAttribute="top" secondItem="zNI-gp-aQk" secondAttribute="bottom" constant="20" id="mux-zN-gBR"/>
+                            <constraint firstAttribute="trailing" secondItem="Jky-XW-yWf" secondAttribute="trailing" constant="8" id="nyv-FG-KvX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sign In" id="Bqw-h0-fJI">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="0uK-vQ-EeB">
+                            <connections>
+                                <action selector="cancel:" destination="T7r-hE-APW" id="1mt-yn-kr2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="email" destination="kVA-Hq-H7M" id="ItP-xD-jcL"/>
+                        <outlet property="login" destination="Jky-XW-yWf" id="Za3-8Q-8i8"/>
+                        <outlet property="password" destination="zNI-gp-aQk" id="mkv-wr-ANz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zON-se-LrG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-681" y="-694"/>
+        </scene>
     </scenes>
+    <color key="tintColor" red="0.98431372549999996" green="0.68627450980000004" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
 </document>

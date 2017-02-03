@@ -34,7 +34,7 @@ class RegisterController: UIViewController {
             .filter{ $0 == .Submitting }
             .subscribe{[weak self] next in
                 guard let ss = self else { return }
-                ss.signup.setTitle("SIGNING IN...", for: .normal)
+                ss.signup.setTitle("SIGNING UP...", for: .normal)
                 ss.signup.backgroundColor = UIColor(red: 100/255, green: 198/255, blue: 254/255, alpha: 1.0)
         }
         .addDisposableTo(disposeBag)

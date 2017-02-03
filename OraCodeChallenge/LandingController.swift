@@ -55,10 +55,24 @@ class LandingController: UIViewController {
     }
     
     @IBAction func login(_ sender: Any) {
-        let login = UIStoryboard(
+        let loginNav = UIStoryboard(
             name: "Login",
             bundle: nil)
-            .instantiateViewController(withIdentifier: "Login")
+            .instantiateViewController(withIdentifier: "Login") as! UINavigationController
+        
+        let login = loginNav.viewControllers.first as! LoginController
+        
+        login.completed.asObservable()
+            .filter{ $0 == true }
+            .subscribe{[weak self] next in
+                guard let ss = self, let _ = next.element else { return }
+                let home = UIStoryboard(name: "Home", bundle: nil).instantiateInitialViewController()!
+                
+                let login = ss.presentedViewController
+                ss.navigationController?.setViewControllers([home], animated: false)
+                login?.dismiss(animated: true, completion: nil)
+            }
+            .addDisposableTo(disposeBag)
         
         present(login, animated: true, completion: nil)
     }

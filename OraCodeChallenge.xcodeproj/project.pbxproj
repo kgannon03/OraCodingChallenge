@@ -38,6 +38,9 @@
 		CAEF49CD1E44286100FFE3BF /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF49CC1E44286100FFE3BF /* ChatService.swift */; };
 		CAEF49CF1E44374300FFE3BF /* ChatList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF49CE1E44374300FFE3BF /* ChatList.swift */; };
 		CAEF49D11E44C47C00FFE3BF /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF49D01E44C47C00FFE3BF /* ChatCell.swift */; };
+		CAEF49D31E44E24500FFE3BF /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF49D21E44E24500FFE3BF /* LoginService.swift */; };
+		CAEF49D51E44E25500FFE3BF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF49D41E44E25500FFE3BF /* LoginViewModel.swift */; };
+		CAEF49D71E44E35500FFE3BF /* LoginPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF49D61E44E35500FFE3BF /* LoginPost.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +77,9 @@
 		CAEF49CC1E44286100FFE3BF /* ChatService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
 		CAEF49CE1E44374300FFE3BF /* ChatList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatList.swift; sourceTree = "<group>"; };
 		CAEF49D01E44C47C00FFE3BF /* ChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
+		CAEF49D21E44E24500FFE3BF /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		CAEF49D41E44E25500FFE3BF /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		CAEF49D61E44E35500FFE3BF /* LoginPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPost.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +171,9 @@
 			children = (
 				CAEF49AC1E43C08100FFE3BF /* Login.storyboard */,
 				CAEF49AE1E43C0DA00FFE3BF /* LoginController.swift */,
+				CAEF49D21E44E24500FFE3BF /* LoginService.swift */,
+				CAEF49D41E44E25500FFE3BF /* LoginViewModel.swift */,
+				CAEF49D61E44E35500FFE3BF /* LoginPost.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -319,13 +328,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAEF49D31E44E24500FFE3BF /* LoginService.swift in Sources */,
 				CAEF49B71E43DF4500FFE3BF /* Session.swift in Sources */,
+				CAEF49D71E44E35500FFE3BF /* LoginPost.swift in Sources */,
 				CAEF499F1E43B01000FFE3BF /* LaunchController.swift in Sources */,
 				CAEF49AF1E43C0DA00FFE3BF /* LoginController.swift in Sources */,
 				CAEF49BE1E44104D00FFE3BF /* LoaderView.swift in Sources */,
 				CABA69791E4398E30085A200 /* AppDelegate.swift in Sources */,
 				CAEF49BC1E43E45400FFE3BF /* APIBaseResponse.swift in Sources */,
 				CAEF49B31E43CB1900FFE3BF /* RegisterViewModel.swift in Sources */,
+				CAEF49D51E44E25500FFE3BF /* LoginViewModel.swift in Sources */,
 				CAEF49A51E43BB7500FFE3BF /* RegisterController.swift in Sources */,
 				CAEF49A11E43B1C800FFE3BF /* LandingController.swift in Sources */,
 				CAEF49C91E44281F00FFE3BF /* ChatController.swift in Sources */,
