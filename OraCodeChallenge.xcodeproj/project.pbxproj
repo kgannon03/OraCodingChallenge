@@ -41,6 +41,7 @@
 		CAEF49D31E44E24500FFE3BF /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF49D21E44E24500FFE3BF /* LoginService.swift */; };
 		CAEF49D51E44E25500FFE3BF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF49D41E44E25500FFE3BF /* LoginViewModel.swift */; };
 		CAEF49D71E44E35500FFE3BF /* LoginPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF49D61E44E35500FFE3BF /* LoginPost.swift */; };
+		CAEF49D91E45103200FFE3BF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF49D81E45103200FFE3BF /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		CAEF49D21E44E24500FFE3BF /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		CAEF49D41E44E25500FFE3BF /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CAEF49D61E44E35500FFE3BF /* LoginPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPost.swift; sourceTree = "<group>"; };
+		CAEF49D81E45103200FFE3BF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 				CAEF499C1E43AC1000FFE3BF /* OraButton.swift */,
 				CAEF49B01E43C28700FFE3BF /* OraFormField.swift */,
 				CAEF49BD1E44104D00FFE3BF /* LoaderView.swift */,
+				CAEF49D81E45103200FFE3BF /* Constants.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				CAEF49B51E43CB2D00FFE3BF /* RegisterService.swift in Sources */,
 				CAEF49D11E44C47C00FFE3BF /* ChatCell.swift in Sources */,
 				CAEF499D1E43AC1000FFE3BF /* OraButton.swift in Sources */,
+				CAEF49D91E45103200FFE3BF /* Constants.swift in Sources */,
 				CAEF49B11E43C28700FFE3BF /* OraFormField.swift in Sources */,
 				CAEF49CD1E44286100FFE3BF /* ChatService.swift in Sources */,
 				CAEF49CB1E44284800FFE3BF /* ChatViewModel.swift in Sources */,

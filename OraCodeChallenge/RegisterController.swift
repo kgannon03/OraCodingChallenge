@@ -35,7 +35,7 @@ class RegisterController: UIViewController {
             .subscribe{[weak self] next in
                 guard let ss = self else { return }
                 ss.signup.setTitle("SIGNING UP...", for: .normal)
-                ss.signup.backgroundColor = UIColor(red: 100/255, green: 198/255, blue: 254/255, alpha: 1.0)
+                ss.signup.backgroundColor = Constants.Colors.oraBlue
         }
         .addDisposableTo(disposeBag)
         
@@ -55,7 +55,7 @@ class RegisterController: UIViewController {
             .subscribe{[weak self] next in
                 guard let ss = self, let status = next.element else { return }
                 ss.signup.setTitle("SIGN UP", for: .normal)
-                ss.signup.backgroundColor = UIColor(red: 251/255, green: 175/255, blue: 63/255, alpha: 1.0)
+                ss.signup.backgroundColor = Constants.Colors.oraOrange
                 
                 let alert = UIAlertController(title: status.errorMessage, message: "", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default))

@@ -42,7 +42,7 @@ struct RegisterService {
                             observer.onNext(APIResponse<UserResponse>(data: user))
                             
                             // TODO: Replace with Keychain
-                            UserDefaults.standard.set(token, forKey: "auth")
+                            UserDefaults.standard.set(token, forKey: Constants.UserDefaultKeys.authTokenKey)
                             return
                         }
         

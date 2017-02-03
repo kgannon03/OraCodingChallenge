@@ -34,7 +34,7 @@ class LoginController: UIViewController {
             .subscribe{[weak self] next in
                 guard let ss = self else { return }
                 ss.login.setTitle("SIGNING IN...", for: .normal)
-                ss.login.backgroundColor = UIColor(red: 100/255, green: 198/255, blue: 254/255, alpha: 1.0)
+                ss.login.backgroundColor = Constants.Colors.oraBlue
             }
             .addDisposableTo(disposeBag)
         
@@ -54,7 +54,7 @@ class LoginController: UIViewController {
             .subscribe{[weak self] next in
                 guard let ss = self, let status = next.element else { return }
                 ss.login.setTitle("SIGN IN", for: .normal)
-                ss.login.backgroundColor = UIColor(red: 251/255, green: 175/255, blue: 63/255, alpha: 1.0)
+                ss.login.backgroundColor = Constants.Colors.oraOrange
                 
                 let alert = UIAlertController(title: status.errorMessage, message: "", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default))

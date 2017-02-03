@@ -46,7 +46,7 @@ struct ChatCellViewModel {
         let author = NSMutableAttributedString(string: "\(name): ")
         author.addAttribute(
             NSForegroundColorAttributeName,
-            value: UIColor(red: 251/155, green: 175/255, blue: 63/255, alpha: 1.0),
+            value: Constants.Colors.oraOrange,
             range: NSMakeRange(0, author.length))
         
         author.append(message)

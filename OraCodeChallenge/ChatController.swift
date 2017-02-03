@@ -56,6 +56,9 @@ class ChatController: UIViewController {
                 }
             }
             .addDisposableTo(disposeBag)
+        
+        // TODO: Bind viewmdoel empty state
+        // TODO: Bind viewmdoel error state
     }
 }
 

@@ -65,6 +65,7 @@ class ChatViewModel {
             .subscribe{[weak self] next in
                 guard let ss = self, let data = next.element?.data?.chatArray else { return }
                 ss.chatList.value = [ss.chatList.value, data].flatMap { $0 }
-        }.addDisposableTo(disposeBag)
+            }
+            .addDisposableTo(disposeBag)
     }
 }

@@ -15,6 +15,6 @@ struct Session {
     static var currentUser : User?
     
     static var authToken : String {
-        return UserDefaults.standard.string(forKey: "auth") ?? ""
+        return UserDefaults.standard.string(forKey: Constants.UserDefaultKeys.authTokenKey) ?? ""
     }
 }
