@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="G3R-TR-Sze">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Launch Controller-->
+        <scene sceneID="Zc7-q3-xNM">
+            <objects>
+                <viewController id="PAu-yA-Ss9" customClass="LaunchController" customModule="OraCodeChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d9L-qn-snq"/>
+                        <viewControllerLayoutGuide type="bottom" id="qWr-FT-OQq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tTj-ft-y1V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ora_splash" translatesAutoresizingMaskIntoConstraints="NO" id="Zi4-pV-eoc">
+                                <rect key="frame" x="38.5" y="272.5" width="298" height="122"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zi4-pV-eoc" firstAttribute="centerX" secondItem="tTj-ft-y1V" secondAttribute="centerX" id="9wm-sb-gpf"/>
+                            <constraint firstItem="Zi4-pV-eoc" firstAttribute="centerY" secondItem="tTj-ft-y1V" secondAttribute="centerY" id="vjV-JU-vbj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="lGd-JL-Xdr"/>
+                    <connections>
+                        <outlet property="splash" destination="Zi4-pV-eoc" id="RjB-gf-hD0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wcb-uE-Iqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="560.79999999999995" y="239.73013493253376"/>
+        </scene>
+        <!--Landing Controller-->
+        <scene sceneID="0gf-vc-TGv">
+            <objects>
+                <viewController storyboardIdentifier="Landing" id="A3F-bp-nfj" customClass="LandingController" customModule="OraCodeChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bpb-7x-a0G"/>
+                        <viewControllerLayoutGuide type="bottom" id="LwO-NR-nHZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Tw-Gn-dUr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ora_splash" translatesAutoresizingMaskIntoConstraints="NO" id="Spx-dE-hJq">
+                                <rect key="frame" x="38" y="193" width="298" height="122"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yU0-Aa-nbx" customClass="OraButton" customModule="OraCodeChallenge" customModuleProvider="target">
+                                <rect key="frame" x="16" y="350" width="167.5" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="39L-VI-bOR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="12"/>
+                                <state key="normal" title="LOG IN">
+                                    <color key="titleColor" red="0.98431372549019602" green="0.68627450980392157" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.98431372549999996" green="0.68627450980000004" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="login:" destination="A3F-bp-nfj" eventType="touchUpInside" id="vRC-2u-S89"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UR7-cU-Bri" customClass="OraButton" customModule="OraCodeChallenge" customModuleProvider="target">
+                                <rect key="frame" x="191.5" y="350" width="167.5" height="36"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.68627450980000004" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Zzi-nk-QRs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="12"/>
+                                <state key="normal" title="SIGN UP">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.98431372549999996" green="0.68627450980000004" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signup:" destination="A3F-bp-nfj" eventType="touchUpInside" id="T9p-Fw-3Zk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yU0-Aa-nbx" firstAttribute="top" secondItem="Spx-dE-hJq" secondAttribute="bottom" constant="35" id="45S-b6-7nd"/>
+                            <constraint firstItem="UR7-cU-Bri" firstAttribute="width" secondItem="yU0-Aa-nbx" secondAttribute="width" id="EQh-DK-Cyk"/>
+                            <constraint firstItem="UR7-cU-Bri" firstAttribute="leading" secondItem="yU0-Aa-nbx" secondAttribute="trailing" constant="8" id="QAz-e5-v1a"/>
+                            <constraint firstItem="UR7-cU-Bri" firstAttribute="baseline" secondItem="yU0-Aa-nbx" secondAttribute="baseline" id="Syd-tN-1uW"/>
+                            <constraint firstItem="Spx-dE-hJq" firstAttribute="centerY" secondItem="6Tw-Gn-dUr" secondAttribute="centerY" constant="-80" id="hYx-5m-j3M"/>
+                            <constraint firstItem="yU0-Aa-nbx" firstAttribute="leading" secondItem="6Tw-Gn-dUr" secondAttribute="leading" constant="16" id="mLg-Xl-7oZ"/>
+                            <constraint firstItem="Spx-dE-hJq" firstAttribute="centerX" secondItem="6Tw-Gn-dUr" secondAttribute="centerX" id="oen-Hz-3nd"/>
+                            <constraint firstAttribute="trailing" secondItem="UR7-cU-Bri" secondAttribute="trailing" constant="16" id="rWS-dD-wMO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="login" destination="yU0-Aa-nbx" id="i72-GZ-wXu"/>
+                        <outlet property="signup" destination="UR7-cU-Bri" id="lxE-EP-4lx"/>
+                        <outlet property="splash" destination="Spx-dE-hJq" id="VJN-Fe-4sy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4yc-yo-kMz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1228" y="239.73013493253376"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yW9-4X-bg7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="G3R-TR-Sze" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gWZ-RD-Xy8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="PAu-yA-Ss9" kind="relationship" relationship="rootViewController" id="MrO-Q5-KmG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GYk-dV-0LS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-378.39999999999998" y="239.73013493253376"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ora_splash" width="298" height="122"/>
+    </resources>
+</document>
