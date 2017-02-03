@@ -42,6 +42,7 @@
 		CAEF49D51E44E25500FFE3BF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF49D41E44E25500FFE3BF /* LoginViewModel.swift */; };
 		CAEF49D71E44E35500FFE3BF /* LoginPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF49D61E44E35500FFE3BF /* LoginPost.swift */; };
 		CAEF49D91E45103200FFE3BF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF49D81E45103200FFE3BF /* Constants.swift */; };
+		CAEF49DB1E4514AA00FFE3BF /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF49DA1E4514AA00FFE3BF /* AccountController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		CAEF49D41E44E25500FFE3BF /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CAEF49D61E44E35500FFE3BF /* LoginPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPost.swift; sourceTree = "<group>"; };
 		CAEF49D81E45103200FFE3BF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CAEF49DA1E4514AA00FFE3BF /* AccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				CAEF49C41E441C2D00FFE3BF /* Account.storyboard */,
+				CAEF49DA1E4514AA00FFE3BF /* AccountController.swift */,
 			);
 			name = Account;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				CAEF49B31E43CB1900FFE3BF /* RegisterViewModel.swift in Sources */,
 				CAEF49D51E44E25500FFE3BF /* LoginViewModel.swift in Sources */,
 				CAEF49A51E43BB7500FFE3BF /* RegisterController.swift in Sources */,
+				CAEF49DB1E4514AA00FFE3BF /* AccountController.swift in Sources */,
 				CAEF49A11E43B1C800FFE3BF /* LandingController.swift in Sources */,
 				CAEF49C91E44281F00FFE3BF /* ChatController.swift in Sources */,
 				CAEF49B51E43CB2D00FFE3BF /* RegisterService.swift in Sources */,

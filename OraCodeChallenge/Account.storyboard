@@ -12,7 +12,7 @@
         <!--OraChat-->
         <scene sceneID="oMf-WI-Sf4">
             <objects>
-                <viewController id="lfL-pS-A64" sceneMemberID="viewController">
+                <viewController id="lfL-pS-A64" customClass="AccountController" customModule="OraCodeChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uy7-2j-5Vj"/>
                         <viewControllerLayoutGuide type="bottom" id="wjK-gW-ENJ"/>
@@ -20,7 +20,54 @@
                     <view key="view" contentMode="scaleToFill" id="4sR-LU-sWL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rGR-hU-sTN" customClass="OraFormField" customModule="OraCodeChallenge" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="YD7-TV-acW"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ju1-9U-4xs" customClass="OraFormField" customModule="OraCodeChallenge" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="114" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="LZF-3J-a3B"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="okf-Uv-WWY" customClass="OraButton" customModule="OraCodeChallenge" customModuleProvider="target">
+                                <rect key="frame" x="8" y="184" width="359" height="36"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.68627450980000004" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="cPZ-4I-S3U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="12"/>
+                                <state key="normal" title="SAVE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rGR-hU-sTN" secondAttribute="trailing" id="L8s-F9-dit"/>
+                            <constraint firstItem="okf-Uv-WWY" firstAttribute="top" secondItem="ju1-9U-4xs" secondAttribute="bottom" constant="20" id="Ogw-4T-26K"/>
+                            <constraint firstItem="rGR-hU-sTN" firstAttribute="top" secondItem="uy7-2j-5Vj" secondAttribute="bottom" id="PvK-XF-9aL"/>
+                            <constraint firstAttribute="trailing" secondItem="ju1-9U-4xs" secondAttribute="trailing" id="QQG-wI-4Rc"/>
+                            <constraint firstItem="rGR-hU-sTN" firstAttribute="leading" secondItem="4sR-LU-sWL" secondAttribute="leading" id="TqL-TM-4T1"/>
+                            <constraint firstItem="ju1-9U-4xs" firstAttribute="top" secondItem="rGR-hU-sTN" secondAttribute="bottom" id="Utp-36-zlM"/>
+                            <constraint firstItem="ju1-9U-4xs" firstAttribute="leading" secondItem="4sR-LU-sWL" secondAttribute="leading" id="ZbW-MN-74E"/>
+                            <constraint firstItem="okf-Uv-WWY" firstAttribute="leading" secondItem="4sR-LU-sWL" secondAttribute="leading" constant="8" id="eAm-lv-S5j"/>
+                            <constraint firstAttribute="trailing" secondItem="okf-Uv-WWY" secondAttribute="trailing" constant="8" id="kK4-ox-5rt"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="OraChat" id="sgU-G1-JcT"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
