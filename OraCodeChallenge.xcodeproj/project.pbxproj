@@ -31,6 +31,13 @@
 		CAEF49BC1E43E45400FFE3BF /* APIBaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF49BB1E43E45400FFE3BF /* APIBaseResponse.swift */; };
 		CAEF49BE1E44104D00FFE3BF /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF49BD1E44104D00FFE3BF /* LoaderView.swift */; };
 		CAEF49C11E441A2300FFE3BF /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAEF49C01E441A2300FFE3BF /* Home.storyboard */; };
+		CAEF49C31E441C1C00FFE3BF /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAEF49C21E441C1C00FFE3BF /* Chat.storyboard */; };
+		CAEF49C51E441C2D00FFE3BF /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAEF49C41E441C2D00FFE3BF /* Account.storyboard */; };
+		CAEF49C91E44281F00FFE3BF /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF49C81E44281F00FFE3BF /* ChatController.swift */; };
+		CAEF49CB1E44284800FFE3BF /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF49CA1E44284800FFE3BF /* ChatViewModel.swift */; };
+		CAEF49CD1E44286100FFE3BF /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF49CC1E44286100FFE3BF /* ChatService.swift */; };
+		CAEF49CF1E44374300FFE3BF /* ChatList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF49CE1E44374300FFE3BF /* ChatList.swift */; };
+		CAEF49D11E44C47C00FFE3BF /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF49D01E44C47C00FFE3BF /* ChatCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +67,13 @@
 		CAEF49BB1E43E45400FFE3BF /* APIBaseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIBaseResponse.swift; sourceTree = "<group>"; };
 		CAEF49BD1E44104D00FFE3BF /* LoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		CAEF49C01E441A2300FFE3BF /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		CAEF49C21E441C1C00FFE3BF /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		CAEF49C41E441C2D00FFE3BF /* Account.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
+		CAEF49C81E44281F00FFE3BF /* ChatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
+		CAEF49CA1E44284800FFE3BF /* ChatViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		CAEF49CC1E44286100FFE3BF /* ChatService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
+		CAEF49CE1E44374300FFE3BF /* ChatList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatList.swift; sourceTree = "<group>"; };
+		CAEF49D01E44C47C00FFE3BF /* ChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +112,8 @@
 		CABA69771E4398E30085A200 /* OraCodeChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				CAEF49C71E441C6A00FFE3BF /* Chat */,
+				CAEF49C61E441C6200FFE3BF /* Account */,
 				CAEF49BF1E441A1400FFE3BF /* Home */,
 				CAEF49BA1E43E06700FFE3BF /* Session */,
 				CAEF49A91E43BFF500FFE3BF /* Signup */,
@@ -182,6 +198,27 @@
 			name = Home;
 			sourceTree = "<group>";
 		};
+		CAEF49C61E441C6200FFE3BF /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				CAEF49C41E441C2D00FFE3BF /* Account.storyboard */,
+			);
+			name = Account;
+			sourceTree = "<group>";
+		};
+		CAEF49C71E441C6A00FFE3BF /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				CAEF49C21E441C1C00FFE3BF /* Chat.storyboard */,
+				CAEF49C81E44281F00FFE3BF /* ChatController.swift */,
+				CAEF49CA1E44284800FFE3BF /* ChatViewModel.swift */,
+				CAEF49CE1E44374300FFE3BF /* ChatList.swift */,
+				CAEF49CC1E44286100FFE3BF /* ChatService.swift */,
+				CAEF49D01E44C47C00FFE3BF /* ChatCell.swift */,
+			);
+			name = Chat;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -243,11 +280,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAEF49C31E441C1C00FFE3BF /* Chat.storyboard in Resources */,
 				CABA69831E4398E30085A200 /* LaunchScreen.storyboard in Resources */,
 				CABA69801E4398E30085A200 /* Assets.xcassets in Resources */,
 				CAEF49AD1E43C08100FFE3BF /* Login.storyboard in Resources */,
 				CAEF49C11E441A2300FFE3BF /* Home.storyboard in Resources */,
 				CAEF49AB1E43C01100FFE3BF /* Signup.storyboard in Resources */,
+				CAEF49C51E441C2D00FFE3BF /* Account.storyboard in Resources */,
 				CAEF499A1E43A93C00FFE3BF /* Landing.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,10 +328,15 @@
 				CAEF49B31E43CB1900FFE3BF /* RegisterViewModel.swift in Sources */,
 				CAEF49A51E43BB7500FFE3BF /* RegisterController.swift in Sources */,
 				CAEF49A11E43B1C800FFE3BF /* LandingController.swift in Sources */,
+				CAEF49C91E44281F00FFE3BF /* ChatController.swift in Sources */,
 				CAEF49B51E43CB2D00FFE3BF /* RegisterService.swift in Sources */,
+				CAEF49D11E44C47C00FFE3BF /* ChatCell.swift in Sources */,
 				CAEF499D1E43AC1000FFE3BF /* OraButton.swift in Sources */,
 				CAEF49B11E43C28700FFE3BF /* OraFormField.swift in Sources */,
+				CAEF49CD1E44286100FFE3BF /* ChatService.swift in Sources */,
+				CAEF49CB1E44284800FFE3BF /* ChatViewModel.swift in Sources */,
 				CAEF49B91E43E00000FFE3BF /* User.swift in Sources */,
+				CAEF49CF1E44374300FFE3BF /* ChatList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  RegisterService.swift
+//  ChatService.swift
 //  OraCodeChallenge
 //
 //  Created by Kevin Gannon on 2/2/17.
@@ -7,57 +7,63 @@
 //
 
 import Foundation
+
+import Foundation
 import RxCocoa
 import RxSwift
 import ObjectMapper
 import Alamofire
 
-struct RegisterService {
+struct ChatService {
     
     enum ResourcePath: String {
-        case Users = "/users"
+        case Chats = "/chats"
         
         var path: String {
             return Session.baseURL + rawValue
         }
     }
     
-    func register(user: UserPost) -> Observable<APIResponse<UserResponse>> {
-        let path = ResourcePath.Users.path
-        let params = user.toJSON()
+    func getChatList(page: Int = 1, limit: Int = 30) -> Observable<APIResponse<ChatList>> {
+        let path = ResourcePath.Chats.path
+        let params = [
+            "page" : page,
+            "limit" : limit
+        ]
+        
+        let headers: HTTPHeaders = [
+            "Authorization": Session.authToken
+        ]
         
         return Observable.create { observer in
             let req = request(
                 path,
-                method: .post,
+                method: .get,
                 parameters: params,
-                encoding: JSONEncoding.default).responseJSON { data in
+                encoding: URLEncoding.default,
+                headers: headers).responseJSON { data in
                     switch data.result {
                     case .success(let json):
                         if
                             let dict = json as? [String : Any],
-                            let user = UserResponse(JSON: dict),
-                            let token = data.response?.allHeaderFields["Authorization"] as? String {
+                            let chatList = ChatList(JSON: dict) {
                             
-                            observer.onNext(APIResponse<UserResponse>(data: user))
-                            
-                            // TODO: Replace with Keychain
-                            UserDefaults.standard.set(token, forKey: "auth")
+                            observer.onNext(APIResponse<ChatList>(data: chatList))
                             return
                         }
-        
+                        
                         if
                             let dict = json as? [String : Any],
                             let error = APIErrorResponse(JSON: dict) {
                             
-                            observer.onNext(APIResponse<UserResponse>(apiError: error))
+                            observer.onNext(APIResponse<ChatList>(apiError: error))
                             return
                         }
                         
-                        observer.onNext(APIResponse<UserResponse>(networkError: .CouldNotParse))
+                        observer.onNext(APIResponse<ChatList>(networkError: .CouldNotParse))
                         
                     case .failure(let error):
-                        observer.onNext(APIResponse<UserResponse>(networkError: .Network(error: error)))
+                        observer.onNext(APIResponse<ChatList>(networkError: .Network(error: error)))
                     }
             }
             

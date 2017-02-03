@@ -50,7 +50,7 @@ struct RegisterViewModel {
     func addBindings() {
         formStatus.asObservable()
             .filter{ $0 == .Submitting }
-            .flatMapLatest { _ -> Observable<APIResponse<User>> in
+            .flatMapLatest { _ -> Observable<APIResponse<UserResponse>> in
                 let user = UserPost(
                     name: self.name,
                     email: self.email,
@@ -61,14 +61,14 @@ struct RegisterViewModel {
         }
         .subscribe{ next in
             guard let response = next.element else { return }
-            guard let user = response.data else {
+            guard let data = response.data else {
                 self.formStatus.value = .NetworkError
                 return
             }
             
             self.formStatus.value = .Complete
             
-            Session.currentUser = user
+            Session.currentUser = data.user
         }
         .addDisposableTo(disposeBag)
     }

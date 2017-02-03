@@ -13,4 +13,8 @@ struct Session {
     static let baseURL = "https://private-93240c-oracodechallenge.apiary-mock.com"
     
     static var currentUser : User?
+    
+    static var authToken : String {
+        return UserDefaults.standard.string(forKey: "auth") ?? ""
+    }
 }

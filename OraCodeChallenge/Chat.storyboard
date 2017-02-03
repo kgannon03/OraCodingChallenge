@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aw2-Kw-8GU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--OraChat-->
+        <scene sceneID="wMd-U3-9er">
+            <objects>
+                <viewController id="UD5-mi-Kan" customClass="ChatController" customModule="OraCodeChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hWz-mf-zSw"/>
+                        <viewControllerLayoutGuide type="bottom" id="pJp-ma-gaj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Oym-fp-sqd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xsI-LT-puh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" rowHeight="110" id="KHj-hz-WSU" customClass="ChatCell" customModule="OraCodeChallenge" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="110"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KHj-hz-WSU" id="tIa-KT-pfi">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="109"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WMm-1q-f8L">
+                                                    <rect key="frame" x="16" y="8" width="343" height="93.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Chat by Andre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMx-NM-z1Z">
+                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="31"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dan - 23 mins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODB-n5-IXh">
+                                                            <rect key="frame" x="0.0" y="31" width="343" height="31.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oh hey!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prR-ol-Saz">
+                                                            <rect key="frame" x="0.0" y="62.5" width="343" height="31"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="WMm-1q-f8L" secondAttribute="trailing" constant="16" id="RQN-u8-cZp"/>
+                                                <constraint firstItem="WMm-1q-f8L" firstAttribute="leading" secondItem="tIa-KT-pfi" secondAttribute="leading" constant="16" id="VLz-E7-sEi"/>
+                                                <constraint firstItem="WMm-1q-f8L" firstAttribute="top" secondItem="tIa-KT-pfi" secondAttribute="top" constant="8" id="jX5-vm-uJI"/>
+                                                <constraint firstAttribute="bottom" secondItem="WMm-1q-f8L" secondAttribute="bottom" constant="8" id="yzs-Ky-e2k"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="chatTitle" destination="hMx-NM-z1Z" id="eHa-Cb-9N1"/>
+                                            <outlet property="lastMessage" destination="prR-ol-Saz" id="Rtv-hA-kk2"/>
+                                            <outlet property="lastUser" destination="ODB-n5-IXh" id="doK-kS-Mor"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="UD5-mi-Kan" id="X1t-FG-EhN"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CbS-Pr-JuB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qPc-uD-8Mc" customClass="LoaderView" customModule="OraCodeChallenge" customModuleProvider="target">
+                                        <rect key="frame" x="172.5" y="318.5" width="30" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="HBk-Cy-gMg"/>
+                                            <constraint firstAttribute="width" constant="30" id="Woe-l9-XLO"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="animating" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                                <color key="value" red="0.98431372549999996" green="0.68627450980000004" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="qPc-uD-8Mc" firstAttribute="centerY" secondItem="CbS-Pr-JuB" secondAttribute="centerY" id="L2g-M3-1xe"/>
+                                    <constraint firstItem="qPc-uD-8Mc" firstAttribute="centerX" secondItem="CbS-Pr-JuB" secondAttribute="centerX" id="b7P-Yi-q8E"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="xsI-LT-puh" secondAttribute="bottom" id="2TJ-Bf-hjA"/>
+                            <constraint firstItem="CbS-Pr-JuB" firstAttribute="leading" secondItem="Oym-fp-sqd" secondAttribute="leading" id="2uT-Mu-bMN"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="CbS-Pr-JuB" secondAttribute="bottom" id="5Sv-Kj-fav"/>
+                            <constraint firstItem="xsI-LT-puh" firstAttribute="leading" secondItem="Oym-fp-sqd" secondAttribute="leading" id="EyT-Uo-DJf"/>
+                            <constraint firstAttribute="topMargin" secondItem="xsI-LT-puh" secondAttribute="top" id="Qds-9w-vWZ"/>
+                            <constraint firstItem="CbS-Pr-JuB" firstAttribute="top" secondItem="Oym-fp-sqd" secondAttribute="topMargin" id="WM1-fH-N6Z"/>
+                            <constraint firstAttribute="trailing" secondItem="xsI-LT-puh" secondAttribute="trailing" id="dtN-Na-EIr"/>
+                            <constraint firstAttribute="trailing" secondItem="CbS-Pr-JuB" secondAttribute="trailing" id="nhV-3U-ho1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="OraChat" id="yM7-pW-fW3"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="loadingCover" destination="CbS-Pr-JuB" id="za7-E7-N0b"/>
+                        <outlet property="tableView" destination="xsI-LT-puh" id="m5h-gH-cJp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KSg-0J-IEt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="359.19999999999999" y="25.637181409295355"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="uGd-xU-5WB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aw2-Kw-8GU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Chat" id="IbZ-XO-YHI"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RYz-cW-fYc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UD5-mi-Kan" kind="relationship" relationship="rootViewController" id="R6H-Yt-MEw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sLm-hC-rLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-580" y="25.637181409295355"/>
+        </scene>
+    </scenes>
+</document>

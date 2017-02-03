@@ -17,6 +17,8 @@ class LoaderView : UIView {
             if window != nil { animating ? start() : stop() }
         }
     }
+    
+    @IBInspectable var strokeColor: UIColor = UIColor.white
 
     override var layer: CAShapeLayer {
         get {
@@ -31,7 +33,7 @@ class LoaderView : UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         layer.fillColor = nil
-        layer.strokeColor = UIColor.white.cgColor
+        layer.strokeColor = strokeColor.cgColor
         layer.lineWidth = 2
         setPath()
     }

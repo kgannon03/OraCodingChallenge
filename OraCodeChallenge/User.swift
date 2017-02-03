@@ -9,11 +9,9 @@
 import ObjectMapper
 import Foundation
 
-struct User : Mappable {
+struct UserResponse : Mappable  {
     
-    var id: Int!
-    var name: String!
-    var email: String!
+    var user: User!
     
     init?(map: Map) {
         if map.JSON["data"] == nil {
@@ -22,9 +20,24 @@ struct User : Mappable {
     }
     
     mutating func mapping(map: Map) {
-        id <- map["data.id"]
-        name <- map["data.name"]
-        email <- map["data.email"]
+        user <- map["data"]
+    }
+}
+
+struct User : Mappable {
+    
+    var id: Int!
+    var name: String!
+    var email: String?
+    
+    init?(map: Map) {
+
+    }
+    
+    mutating func mapping(map: Map) {
+        id <- map["id"]
+        name <- map["name"]
+        email <- map["email"]
     }
 }
 

@@ -69,33 +69,17 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.98431372549999996" green="0.68627450980000004" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="register:" destination="ohi-eb-tXk" eventType="touchUpInside" id="f9B-Fg-1Mp"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i3h-Kj-xCH" customClass="LoaderView" customModule="OraCodeChallenge" customModuleProvider="target">
-                                <rect key="frame" x="175" y="289.5" width="25" height="25"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="25" id="dLG-a7-4Gz"/>
-                                    <constraint firstAttribute="height" constant="25" id="maX-Jj-z4Q"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="animating" value="NO"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="QYc-H1-iWJ" secondAttribute="trailing" id="558-vy-Wt7"/>
-                            <constraint firstItem="i3h-Kj-xCH" firstAttribute="centerY" secondItem="YAw-qI-Nry" secondAttribute="centerY" id="C8x-Tn-ahB"/>
-                            <constraint firstItem="i3h-Kj-xCH" firstAttribute="centerX" secondItem="YAw-qI-Nry" secondAttribute="centerX" id="DgL-eF-0FV"/>
                             <constraint firstItem="inV-cs-qjv" firstAttribute="top" secondItem="CBN-tJ-bol" secondAttribute="bottom" id="EfW-JA-4Pw"/>
                             <constraint firstItem="inV-cs-qjv" firstAttribute="leading" secondItem="VKT-XE-hDK" secondAttribute="leading" id="Kwl-mg-Yao"/>
                             <constraint firstAttribute="trailing" secondItem="CBN-tJ-bol" secondAttribute="trailing" id="Nmh-q4-FFf"/>
@@ -125,7 +109,6 @@
                         <outlet property="name" destination="QYc-H1-iWJ" id="sxN-XL-Eqo"/>
                         <outlet property="password" destination="inV-cs-qjv" id="gI7-nb-akn"/>
                         <outlet property="signup" destination="YAw-qI-Nry" id="ayT-nP-Grj"/>
-                        <outlet property="spinner" destination="i3h-Kj-xCH" id="yyg-wz-36E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cbj-MF-Hde" userLabel="First Responder" sceneMemberID="firstResponder"/>

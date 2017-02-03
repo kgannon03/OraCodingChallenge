@@ -8,12 +8,16 @@
 
 import UIKit
 import Hero
+import RxCocoa
+import RxSwift
 
 class LandingController: UIViewController {
 
     @IBOutlet weak var splash: UIImageView!
     @IBOutlet weak var login: OraButton!
     @IBOutlet weak var signup: OraButton!
+    
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +32,26 @@ class LandingController: UIViewController {
     }
     
     @IBAction func signup(_ sender: Any) {
-        let signup = UIStoryboard(
+        let signupNav = UIStoryboard(
             name: "Signup",
             bundle: nil)
-            .instantiateViewController(withIdentifier: "SignUp")
+            .instantiateViewController(withIdentifier: "SignUp") as! UINavigationController
         
-        present(signup, animated: true, completion: nil)
+        let signup = signupNav.viewControllers.first as! RegisterController
+        
+        signup.completed.asObservable()
+            .filter{ $0 == true }
+            .subscribe{[weak self] next in
+                guard let ss = self, let _ = next.element else { return }
+                let home = UIStoryboard(name: "Home", bundle: nil).instantiateInitialViewController()!
+                
+                let signup = ss.presentedViewController
+                ss.navigationController?.setViewControllers([home], animated: false)
+                signup?.dismiss(animated: true, completion: nil)
+            }
+            .addDisposableTo(disposeBag)
+        
+        present(signupNav, animated: true, completion: nil)
     }
     
     @IBAction func login(_ sender: Any) {

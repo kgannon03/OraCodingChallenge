@@ -16,10 +16,11 @@ class RegisterController: UIViewController {
     @IBOutlet weak var password: OraFormField!
     @IBOutlet weak var confirmPassword: OraFormField!
     @IBOutlet weak var signup: OraButton!
-    @IBOutlet weak var spinner: LoaderView!
     
     var viewModel = RegisterViewModel(service: RegisterService())
     let disposeBag = DisposeBag()
+    
+    var completed = Variable<Bool>(false)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,10 +34,19 @@ class RegisterController: UIViewController {
             .filter{ $0 == .Submitting }
             .subscribe{[weak self] next in
                 guard let ss = self else { return }
-                ss.signup.setTitle("", for: .normal)
-                ss.spinner.animating = true
+                ss.signup.setTitle("SIGNING IN...", for: .normal)
+                ss.signup.backgroundColor = UIColor(red: 100/255, green: 198/255, blue: 254/255, alpha: 1.0)
         }
         .addDisposableTo(disposeBag)
+        
+        viewModel.formStatus
+            .asObservable()
+            .filter{ $0 == .Complete }
+            .subscribe{[weak self] next in
+                guard let ss = self else { return }
+                ss.completed.value = true
+            }
+            .addDisposableTo(disposeBag)
         
         viewModel.formStatus
             .asObservable()
@@ -45,7 +55,7 @@ class RegisterController: UIViewController {
             .subscribe{[weak self] next in
                 guard let ss = self, let status = next.element else { return }
                 ss.signup.setTitle("SIGN UP", for: .normal)
-                ss.spinner.animating = false
+                ss.signup.backgroundColor = UIColor(red: 251/255, green: 175/255, blue: 63/255, alpha: 1.0)
                 
                 let alert = UIAlertController(title: status.errorMessage, message: "", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default))
@@ -53,8 +63,6 @@ class RegisterController: UIViewController {
                 ss.present(alert, animated: true, completion: nil)
             }
             .addDisposableTo(disposeBag)
-        
-        
     }
 
     @IBAction func register(_ sender: Any) {
